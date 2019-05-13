@@ -1,7 +1,11 @@
-(function(blah) {
-  function Circle() {
-    this.radius = 10;
+(function(exports) {
+  function Note(text) {
+    this.text = text;
   };
-  blah.Circle = Circle;
-})(this);
 
+  Note.prototype.getText = function() {
+      return this.text;
+  };
+
+  exports.Note = Note;
+})(this);
