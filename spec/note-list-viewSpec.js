@@ -3,14 +3,11 @@
 function testNoteListView() {
     // arrange
     var noteList = new NoteList();
-    var note = new Note("here you go");
-    var note2 = new Note("no thanks");
-    
-    //act 
-    noteList.array.push(note, note2)
+    // act 
+    noteList.addNote("here you go")
+    noteList.addNote("no thanks")
     var noteListView = new NoteListView(noteList);
-    
-    //assert
+    // assert
     assert.isTrue(noteListView.getHTML() === '<ul><li><div>here you go</div></li><li><div>no thanks</div></li></ul>');
 };
 
